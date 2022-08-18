@@ -1,0 +1,132 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --PrimaryOrange: hsl(25, 97%, 53%);
+  --NeutralWhite: hsl(0, 0%, 100%);
+  --NeutralLightGrey: hsl(217, 12%, 63%);
+  --NeutralMediumGrey: hsl(216, 12%, 54%);
+  --NeutralDarkBlue: hsl(213, 19%, 18%);
+  --NeutralVeryDarkBlue: hsl(216, 12%, 8%);
+  --fontsize: 15;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--NeutralVeryDarkBlue);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 407px;
+  background-color: var(--NeutralDarkBlue);
+  border-radius: 27px;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 350px;
+  }
+}
+
+.container img {
+  padding: 20px;
+  background-color: hsl(213deg 18% 20%);
+  border-radius: 50%;
+  margin: 0;
+}
+
+.container h1 {
+  color: var(--NeutralWhite);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.container p {
+  font-size: var(--fontsize);
+  line-height: 1.5;
+  margin: 0;
+  color: var(--NeutralMediumGrey);
+}
+
+.container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container ul li span {
+  padding: 20px;
+  background-color: hsl(213deg 18% 20%);
+  border-radius: 50%;
+  width: 50px;
+  color: var(--NeutralLightGrey);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ratefull {
+  background-color: var(--PrimaryOrange) !important;
+  color: var(--NeutralWhite) !important;
+}
+
+.rate {
+  color: var(--NeutralWhite) !important;
+  background-color: var(--NeutralLightGrey) !important;
+}
+.container ul li:last-child span:hover {
+  background-color: var(--PrimaryOrange);
+  color: var(--NeutralWhite);
+}
+
+.container ul li span:hover {
+  color: var(--NeutralWhite);
+  background-color: var(--NeutralLightGrey);
+}
+
+.container button {
+  display: block;
+  margin: 20px auto 0;
+  border: 0;
+  padding: 10px 130px;
+  background-color: var(--PrimaryOrange);
+  border-radius: 15px;
+  color: var(--NeutralWhite);
+  text-transform: uppercase;
+  font-size: var(--fontsize);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background-color: var(--NeutralWhite);
+  color: var(--PrimaryOrange);
+}
+
+@media (max-width: 768px) {
+  .container button {
+    padding: 10px 120px;
+  }
+}
